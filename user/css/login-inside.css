@@ -1,0 +1,265 @@
+
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        background: transparent;
+    }
+
+    body {
+       
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f2e5d2;
+    }
+    nav ul {
+        list-style: none;
+    }
+
+    blockquote, q {
+        quotes: none;
+    }
+
+        blockquote:before, blockquote:after, q:before, q:after {
+            content: none;
+        }
+
+    a {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
+    ins {
+        background-color: #ff9;
+        color: #000;
+        text-decoration: none;
+    }
+    .modalBackground {
+            background-color: Gray;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            z-index: 10000;
+            cursor:wait;
+        }
+.hide {
+    display:none;
+}
+    mark {
+        background-color: #ff9;
+        color: #000;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    del {
+        text-decoration: line-through;
+    }
+
+    abbr[title], dfn[title] {
+        border-bottom: 1px dotted;
+        cursor: help;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+.itex {
+        font-size: .85em;
+    font-style: italic;
+    color: #777;
+    margin-bottom:5px;
+    display:block;
+}
+    input, select {
+        vertical-align: middle;
+    }
+
+    a {
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+    }
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.top {
+        position: absolute;
+        top: 28%;
+        left:0;
+        right:0;
+}
+    .container {
+        height: 295px;        
+        width: 400px;
+        margin:auto;
+    }
+.container2 {
+    height: 199px;
+    width: 467px;
+}
+.container3 {
+    height: 199px;
+    width: 567px;
+}
+.container3 .input_text {
+    width: 250px;
+    margin-bottom:10px;
+}
+    .form_wrap {
+        background: #fff;
+        border: 4px solid #cc8822;
+        border-radius: 10px;
+        padding: 30px 15px;
+    }
+.tac
+{
+    text-align:center;
+}
+.lf_head {
+    background: url(../images/mmm.png) no-repeat scroll 72px top;
+    height: 50px;
+    line-height: 40px;
+    font-size: 20px;
+    padding: 0 0 10px 145px;
+}
+.mltext {
+    margin-left:60px;
+}
+    .mltext label {
+        width:170px;
+        float:left;
+    }
+.exi {
+    margin:5px 0 20px 0;
+}
+.btgr {
+    background:#7DC55A !important;
+}
+    .lf_line {
+        padding: 0 0 5px;
+    }
+    #dialog { 
+    padding: 30px 15px;
+}
+
+        .lf_line label {
+            float: left;
+            font-size: 12px;
+            line-height: 21px;
+            margin: 0 10px 0 0;
+            text-align: right;
+            width: 135px;
+        }
+        .rf_line {
+            float: right;
+            width: 216px;
+            font-style:italic; 
+        }
+        .rf_line,.rf_line a {
+                margin-bottom:5px;
+            }
+            .rf_line a {
+                display:block;
+                font-size:.95em;
+            }
+            .rf_line {
+                
+                font-size:.9em;
+            }
+.clear {
+    clear:both;
+}
+    .input_text {
+        background: #ccc;
+        border: 0 none;
+        border-radius: 3px;
+        color: #666;
+        font-size: 13px;
+        padding: 3px 7px;
+        width: 180px;
+    }
+
+    .lf_line button {
+        margin: 0 0 0 145px;
+        outline: medium none;
+        cursor: pointer;
+        padding: 5px 30px;
+        border-radius: 10px;
+    }
+
+    /*.but_login {background: #e18905;  border: 0 none; cursor: pointer; margin: 0; padding: 0; color:#fff;}*/
+    .but_login {
+        background: #FF8C00;
+        border: 0px solid #e18905;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0;
+        padding: 5px 20px;
+        color: #fff;
+        box-shadow: 1px 1px 1px #946d3f;
+    }
+
+    .lf_line p {
+        color: #777;
+        font-size: 12px;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    a {
+        color: #777;
+    }
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) {
+     .top {
+        top: 10%;
+    }
+    .container2 {
+    width: 410px;
+}
+    /*.container {
+        width: 80%;
+        left: auto;
+        margin: auto;
+    }
+
+    .input_text {
+        width: auto;
+    }
+
+
+    .lf_head {
+        text-align: center;
+    }
+
+    .lf_line label {
+        width: auto;
+    }
+
+    .input_text {
+        width: 92%;
+    }
+
+    .lf_head {
+        background: url(../images/mmm.png) no-repeat scroll 32px top;
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 0 10px 27px;
+    }*/
+}

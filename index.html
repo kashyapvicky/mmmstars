@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head id="ctl00_Head1">
+    <title>
+        Dashboard
+    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="user/images/favicon.ico" rel="shortcut icon" />
+    <link href="user/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="user/css/style.css" />
+    <link rel="stylesheet" href="user/css/css_referals.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="user/js/jquery.min.js"></script>
+    <script src="user/js/bootstrap.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script>
+        function showModal() {
+            $('#attention-ms-alp-1').modal('show');
+
+        }
+
+
+    </script>
+    <!-- <script src="user/js/wowslider.js"></script> -->
+    <!-- <link href="user/css/style_slider.css" rel="stylesheet" /> -->
+    <style>
+        .hidden {
+            display: block !important;
+        }
+
+        .checked {
+            background-color: #ff6a00;
+            color: #fff;
+        }
+
+        .unchecked {
+            color: #ccc;
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        #wizard_row_table tr {
+            border-bottom: 1px solid black;
+        }
+
+        #wizard_row_table tr td {
+            padding: 5px 0px;
+        }
+
+        .rbt_list_plan {
+            padding-left: 0px !important;
+        }
+
+        .rbt_list_plan li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    </style>
+    <style>
+        .Confirm {
+            background-image: url(user/images/ok.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 36px;
+            width: 36px;
+        }
+
+        button.l-btn {
+            color: #444;
+            background: url(user/images/ui-bg_gloss-wave_60_fece2f_500x100.png) repeat-x 50% 50%;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            zoom: 1;
+            height: 26px;
+            padding-right: 18px;
+            cursor: pointer;
+            outline: none;
+            border-radius: 8px;
+            border: 1px solid #D19405;
+        }
+
+        button.l-btn {
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            zoom: 1;
+            height: 26px;
+            outline: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <nav class='navbar navbar-default bd-navbar' role='navigation'>
+            <div class='container-fluid'>
+                <div class='navbar-header'>
+                    <button type='button' class='navbar-toggle' data-toggle='collapse'
+                        data-target='#bs-example-navbar-collapse-1'>
+                        <span class='sr-only'>Toggle navigation</span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                    </button>
+                    <a class='navbar-brand' href='/member'>
+                        <img style="margin-top:-15px" src='user/images/mmm_logo.png' /></a>
+                </div>
+                <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                    <ul class='nav navbar-nav'>
+                        <li class='l-btn l-btn-plain'><a class='l-btn-left' href='#'><span
+                                    class='l-btn-text icon-desktop' style='padding-left: 20px'>Dashboard</span></a></li>
+                        <li id="ctl00_li_participent" class="l-btn l-btn-plain dropdown">
+                            <a href="#" class="dropdown-toggle l-btn-left" data-toggle="dropdown"><span
+                                    class="l-btn-text icon-group" style="padding-left: 20px">Participants</span><span
+                                    class="m-btn-downarrow">&nbsp;</span></a>
+                            <ul class="dropdown-menu menu">
+                                <li class="l-btn l-btn-plain">
+                                    <div class="tooltip"><a href="#" class="l-btn-left"
+                                            style="padding-left: 2px"><span class="l-btn-text icon-group"
+                                                style="padding-left: 26px">Referrals</span></a><span
+                                            class="tooltiptext">You receive Referral Bonus for your referrals.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                      
+                        <li class='l-btn l-btn-plain'><a class='l-btn-left'
+                                href='#'><span class='l-btn-text fa fa-telegram'
+                                    style='padding-left: 20px;'>&nbsp; &nbsp; Telegram</span></a></li>
+                       
+                        <li class='l-btn l-btn-plain'><a class='l-btn-left' href='#'><span
+                                    class='l-btn-text icon-money' style='padding-left: 20px'>Contract</span></a></li>
+                    </ul>
+                    <!-- <form class='navbar-form navbar-left' role='search'>
+                     <div class='form-group'>
+                       <input type='text' class='form-control' placeholder='Search'>
+                     </div>
+                     <button type='submit' class='btn btn-default'>Submit</button> -->
+                    </form>
+                    <ul class='nav navbar-nav navbar-right'>
+                        
+                        <li class='l-btn l-btn-plain'><a class='l-btn-left' href='#'><span
+                                    class='l-btn-text icon-ticket' style='padding-left: 20px'>support</span></a></li>
+                        <li class='l-btn l-btn-plain dropdown'>
+                            <a href='#' class='dropdown-toggle l-btn-left' data-toggle='dropdown'><span
+                                    class='l-btn-text icon-info' style='padding-left: 20px'>Social Platform</span><span
+                                    class='m-btn-downarrow'>&nbsp;</span></a>
+                            <ul class='dropdown-menu menu'>
+                                <li class='l-btn l-btn-plain'><a href='dashboard/navigatin?pg=news' class='l-btn-left'
+                                        style='padding-left: 2px'><span class='l-btn-text icon-user'
+                                            style='padding-left: 26px'>Youtube</span></a></li>
+                                <li class='l-btn l-btn-plain'><a href='https://global-mmm.org/faq.html'
+                                        class='l-btn-left' style='padding-left: 2px' target="_blank"><span
+                                            class='l-btn-text icon-user' style='padding-left: 26px'>Facebook</span></a></li>
+                                <li class='l-btn l-btn-plain'><a href='https://global-mmm.org/mmm_Abroad.html'
+                                        class='l-btn-left' style='padding-left: 2px' target="_blank"><span
+                                            class='l-btn-text icon-user' style='padding-left: 26px'>Twitter</span></a></li>
+                                <!-- <li class='divider'></li> -->
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="panel layout-panel panel-body" style="min-height: 650px;">
+        <div id="ctl00_maincontent_guider_img" class="flag_china">
+            <i id="ctl00_maincontent_guider_img_i" class="rank_india_normal_1"
+                style="background-repeat: no-repeat; background-size: 112px 120px;"></i>
+        </div>
+        <div class="container-fluid" style="margin-top: 150px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                        <img src="user/images/heading_warning.png"
+                            style="margin-top: 10px; border-radius: 10px; min-height: 35px;"
+                            class="img img-responsive" />
+                    </div>
+                    <div class="col-md-12" style="display: none;">
+                        <img id="ctl00_maincontent_img_top" class="img img-responsive" src=""
+                            style="border-width:0px;margin-top: 20px; min-height: 50px;" />
+                    </div>
+                    <div class="col-md-12" style="display: none;">
+                        <img id="ctl00_maincontent_imgbottom" class="img img-responsive" src=""
+                            style="border-width:0px;margin-top: 20px; min-height: 50px;" />
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px; padding: 0px 8px">
+                    <div class="col-md-6" style="padding: 0px 8px;">
+                        <div id="put_help" class="ordin_button">
+                            <!-- Trigger the modal with a button -->
+                            <div data-toggle="modal" data-target="#Provide_Help">
+                                <p class="translate">Provide Help</p>
+                                <p class="translate1">Acquire Mavro (Make a Contribution)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding: 2px 8px;">
+                        <div id="get_help" class="ordout_button">
+                            <div data-toggle="modal" data-target="#Get_Help" style="height: 83px;">
+                                <p class="translate">Get Help</p>
+                                <p class="translate1">Cash-Out Mavro (Make a Withdrawal)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 30px; padding: 0px 8px;">
+                    <div class="col-md-8" style="padding: 0px 8px;">
+                        <tbody>
+                            <div id="">
+                                <div class="arrg arrg_in" id="" style="cursor: pointer;" id_arrangement="1060322">
+                                    <table width="100%" border="0" cellspacing="2" cellpadding="2" class="arrg_tbarrg">
+                                        <tbody>
+                                            <tr>
+                                                <td width="36" rowspan="2" class="arrg_num">
+                                                    <div class="arrg_status_img Half_Confirm"></div>
+                                                    <!-- <span class="arrg_sm10"><span class="translate">Number</span>:<br>
+                                                    </span><span class="arrg_id">Z61557163300</span> -->
+                                                </td>
+                                                <td class="arrg_status_name">
+                                                    <div id="ctl00_maincontent_lst_match_processed_ctrl0_slip_pending">
+                                                        You can get help once your PH get matured</div>
+                                                </td>
+                                                <td class="arrg_wait">
+                                                    <div id="ctl00_maincontent_lst_match_processed_ctrl0_div1">
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <div id="ctl00_maincontent_lst_match_processed_ctrl0_divmsg">
+                                                </div>
+                                            </tr>
+                                            <tr>
+                                                <!-- <td colspan="3" data-toggle="modal" data-target="#greenorder_1"  data-todo='{"username":"adminn","email":"admin@gmail.com","phone_number":"90341950011","g_email":"admin@guider.com","g_phone_number":"9254400036","transaction_id":"Z61557163300","creating_date":"2019-05-06 22:51:40","id":"1","gh_id":"1","gh_user_id":"1","ph_name":"abc","gh_name":"test","ph_id":"1","ph_user_id":"6","link_amount":"0.2","slab":"0","created_at":"2019-05-07 11:31:24","modified_at":"2019-05-22 15:49:08","status":"2","ph_status":"1","is_extended":"1","gh_status":"1","ph_hashkey":null,"ph_conf_img":null,"ac_type":"2","ac_name":"my btc account","btc_address":"nklasdsdkjjkdas32332213","bank_name":null,"ifsc_code":null,"ac_number":null,"remaining_time":0}'> -->
+                                                <td colspan='3' data-toggle='modal'
+                                                    onclick='open_greenoder_box({"username":"adminn","email":"admin@gmail.com","phone_number":"90341950011","g_email":"admin@guider.com","g_phone_number":"9254400036","transaction_id":"Z61557163300","creating_date":"2019-05-06 22:51:40","id":"1","gh_id":"1","gh_user_id":"1","ph_name":"abc","gh_name":"test","ph_id":"1","ph_user_id":"6","link_amount":"0.2","slab":"0","created_at":"2019-05-07 11:31:24","modified_at":"2019-05-22 15:49:08","status":"2","ph_status":"1","is_extended":"1","gh_status":"1","ph_hashkey":null,"ph_conf_img":null,"ac_type":"2","ac_name":"my btc account","btc_address":"nklasdsdkjjkdas32332213","bank_name":null,"ifsc_code":null,"ac_number":null,"remaining_time":0})'>
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="arrg_num"><span class="arrg_sm10"><span
+                                                                            class="translate">Date of
+                                                                            creating</span>:<br>
+                                                                    </span><span class="arrg_date">06-05-2019</span>
+                                                                </td>
+                                                                </span><span class="arrg_date"></span>
+                                                </td>
+                                                <td class="arrg_name1">
+                                                    <span class="arrg_user_in">You</span>
+                                                    <div class="arrg_bank_in">TRX</div>
+                                                </td>
+                                                <td align="center" class="arrg_summ">
+                                                    <span class="arrg_summ_in">&gt;</span> &nbsp; <span
+                                                        class="arrg_amt">
+                                                        <span class="amount-format">200000</span> TRX</span> &nbsp; <span
+                                                        class="arrg_summ_out">&gt;</span>
+                                                </td>
+                                                <td class="arrg_name2">
+                                                    <span class="arrg_user_out">Contract</span>
+                                                    <div class="arrg_bank_out">TRX</div>
+                                                </td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" style="text-align: right; padding-top: 5px;"><a
+                                                        href="javascript:void(0);"
+                                                        class="neoui-greybutton translate">Tronscan &gt;&gt;</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" style="font-size: 10px;">
+                                                    <div style="display: none;" class="transfer_bottom">
+                                                        <div style="float: right; width: 235px;">
+                                                            <a href="#"
+                                                                class="easyui-linkbutton transfer_disallow l-btn"
+                                                                iconcls="icon-cancel"><span class="l-btn-left"><span
+                                                                        class="l-btn-text icon-cancel"
+                                                                        style="padding-left: 20px;">Отказаться</span></span></a>
+                                                            <a href="#" class="easyui-linkbutton transfer_allow l-btn"
+                                                                iconcls="icon-ok"><span class="l-btn-left"><span
+                                                                        class="l-btn-text icon-ok"
+                                                                        style="padding-left: 20px;">Принять</span></span></a>
+                                                        </div>
+                                                        <div style="overflow: hidden; zoom: 1; line-height: 12px;">
+                                                            <p style="margin: 0 0 7px 0;">Вы можете отказаться от
+                                                                исполнения поручения, в таком случае к вам не будет
+                                                                применено санкций.</p>
+                                                            <p style="margin: 0;">При подтверждении приема Мавро, вы
+                                                                будете должны перевести участнику соответствующую сумму,
+                                                                либо оказать услугу или передать товар.</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="attention_message translate"
+                                        style="display: none; color: red; padding: 10px; text-align: center">IMPORTANT
+                                        NOTE: send only the EXACT AMOUNT indicated in the order (please check the
+                                        numbers after the decimal point in the payment amount)</div>
+                                    </td>
+                                    </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
+            </div>
+            <div class="col-md-4" style="padding: 0px 8px;">
+                <!----- List View Provide Help Sidebar Start------------>
+                <div id="ctl00_maincontent_update_pannel_lst_r_provide_help">
+                    <!----- List View Provide Help Sidebar Start------------>
+                    <div id="ctl00_maincontent_lst_r_provide_help_ctrl0_pnl_side_slip_ph">
+                        <!-- side div first appear when user provide help -->
+                        <div id="" class="ordin hidden" style="cursor: pointer;">
+                            <table width="100%" border="0" cellspacing="6" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="ord_title"><span class="translate">Request to provide help</span><br>
+                                            <span class="order_in_id">
+                                                2000 TRX </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="ord_body">
+                                            <div class="ord_body_info">
+                                                <span class="translate">Participant address</span>: <span class="order_in_fio">
+                                                    TSCZc58nPCJx3YHNZzMyjrmR78mWPbqNKg&nbsp;
+                                                </span>
+                                                <br>
+                                                <br>
+                                                <div id="ctl00_maincontent_lst_r_provide_help_ctrl0_ph_bal"
+                                                    class="rest_in">
+                                                    <span class="translate">ROI</span>:&nbsp;&nbsp;&nbsp;343 TRX <span
+                                                        class="order_in_rest"><span
+                                                            class="amount-format">0</span></span> <br>
+                                                </div>
+                                                <br>
+                                                <span class="translate">Days left to maturity</span>: <span class="order_in_date">
+                                                   5 days</span>
+                                                <br>
+                                               
+                                                <span class="order_in_mavro"></span>
+                                                <br>
+                                                <span class="translate">Status</span>: <span class="order_in_status">
+                                                    Request processed </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <a onclick='get_this_order_detail({"first_name":"vickyy","email":"veee.kay258@gmail.com","id":"1","sponsor":"admin@gmail.com","user_id":"6","transaction_id":"Z61557163300","created_at":"2019-05-06 22:51:40","modified_at":"2019-06-05 15:13:43","amount":"2","mavro_type":"2","p_type":"2","slab_1":"1","sp_1":"0.2","slab_2":"1","sp_2":"0.8","slab_3":"1","sp_3":"1","is_cancelled":"1","status":"2","balance":0,"ph_status_t":"Request processed","class":"ordin hidden"})'
+                                                class='neoui-greybutton translate'
+                                                style='float: right;'>Details&gt;&gt;</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!----- List View Provide Help Sidebar End------------>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Modal for provide help first -->
+    <div class="container">
+        <!-- Modal -->
+        <!-- provide help modal -->
+        <div class="modal fade" id="Provide_Help" role="dialog">
+            <div class="modal-dialog" style="top: 50px; width: 878px; left: 0px; z-index: 9009;">
+                <!-- Modal content-->
+                <!-- modal when ph request is already pending -->
+                <div class="modal fade" id='ph_pending_modal' role="dialog">
+                    <div class="modal-dialog" style="top: 30px; width: 288px; left: 0px; z-index: 9009;">
+                        <!-- Modal content-->
+                        <div class="modal-content window">
+                            <div class="panel-header panel-header-noborder window-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <span class=" panel-title panel-with-icon">Confirmation</span>
+                            </div>
+                            <div class="messager-body panel-body panel-body-noborder window-body" title=""
+                                style="width: 275px; height: auto;">
+                                <div class="messager-icon messager-question"></div>
+                                <div>Sorry You can not provide help as your help is already in queue!</div>
+                                <div style="clear: both;"></div>
+                                <div class="messager-button">
+                                    <a href="javascript:void(0)" class="l-btn" style="margin-left: 10px;"
+                                        data-dismiss="modal"><span class="l-btn-left"><span
+                                                class="l-btn-text">Ok</span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /modal when ph request is already pending -->
+                <div class="modal-content window">
+                    <div class="panel-header panel-header-noborder window-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <form id="ph_form" action="#" method="post">
+                            <img src="/user/images/filesave.png"><span class=" panel-title panel-with-icon">Provide
+                                Help</span>
+                    </div>
+                    <div class="dialog-content panel-body panel-body-noheader window-body"
+                        style="padding: 10px; width: 866px;" title="">
+                        <div id="">
+                            <ul class="params-list">
+                                <li id="bank_type">
+                                    <label><span class="translate display-inline">Choose the most convenient method to
+                                            provide help to another participantt</span><span id="choose_bank_btc_hint"
+                                            class="deposit_list_description npopover"
+                                            data-hint="Choose the most convenient way of making a contribution (providing help) – either your local currency () through a bank transfer to recipient`s account or bank card, or cryptocurrency using your cryptocurrency wallets. <b>If you transfer money (provide help) via bank, you will receive a 3% bonus of the transferred amount.</b>"
+                                            title="">?</span></label>
+                                    <div>
+                                        <ul id="bank-types-list" class="h_list deposit_list">
+                                            <li><span id="btc_radio1">
+                                                    <input id="" type="radio" name="p_type" value="2" checked="checked"
+                                                        / required><!-- 1 for btc -->
+                                                    TRX</span> <span id="btc_hint"
+                                                    class="deposit_list_description npopover" title=""
+                                                    data-hint="Select BTC"></span></li>
+                                            <!--  <li><span id="bank_radio1">
+                     <input id="" type="radio" name="p_type" value="1" />
+                     BTC</span>
+                     <span id="bank_hint" class="deposit_list_description npopover" data-hint="Select INR" title="">?</span></li> -->
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="deposit">
+                                    <label class="translate">Mavro Types</label>
+                                    <ul id="deposit_list" class="h_list">
+                                        <li><span id="accrule_baze_1300_radio">
+                                                <ul id="ctl00_maincontent_rdb_mavro" class="rbt_list_plan">
+                                                    <li><input id="" type="radio" required name="mavro"
+                                                            value="1" /><label for="ctl00_maincontent_rdb_mavro_0">MAVRO
+                                                            110% (10 Days)</label></li>
+                                                    <li><input id="" required type="radio" name="mavro"
+                                                            value="2" /><label for="ctl00_maincontent_rdb_mavro_1">MAVRO
+                                                            120% (15 Days)</label></li>
+                                                            <li><input id="" required type="radio" name="mavro"
+                                                                value="2" /><label for="ctl00_maincontent_rdb_mavro_1">MAVRO
+                                                                130% (20 Days)</label></li>
+                                                                <li><input id="" required type="radio" name="mavro"
+                                                                    value="2" /><label for="ctl00_maincontent_rdb_mavro_1">MAVRO
+                                                                    150% (30 Days)</label></li>
+                                                                    <li><input id="" required type="radio" name="mavro"
+                                                                        value="2" /><label for="ctl00_maincontent_rdb_mavro_1">MAVRO
+                                                                        200% (50 Days)</label></li>
+                                                    <!-- <li><input id="ctl00_maincontent_rdb_mavro_2" type="radio" name="ctl00$maincontent$rdb_mavro" value="3" /><label for="ctl00_maincontent_rdb_mavro_2">3 months 50% contribution (Per Month)</label></li> -->
+                                                </ul>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="amount" class="">
+                                    <label class="translate">Amount</label>
+                                    <div class="input-desc">
+                                        </i><input placeholder="Min 100 TRX" name="amount" id="ph_amt" type="number" maxlength="12" id=""
+                                            required />
+                                        <div id="input-desc" class="input-desc__text"></div>
+                                    </div>
+                                    <span id="btc_value" style="display: none;">false</span>
+                                    <div id="amount-error" class="form-error-message" style="display: none;">false</div>
+                                </li>
+                                <li class="noList" style="display: none">
+                                    <div class="calc-results-wrapper js-calc-results">
+                                    </div>
+                                </li>
+                                <li class="noList">
+                                    <label for="terms_agree" class="translate">
+                                        <span class="chbox-row"><input id="" type="checkbox" name="warning_agree"
+                                                required /></span>
+                                        <span id="terms" class="chbox-row-text terms-text">I read the <a
+                                                href="https://mmm-india.net/warning.aspx" target="_blank">THE
+                                                WARNING</a>, and I fully understand all the risks. I make decision to
+                                            participate in MMM, being of sound mind and memory.<br class="clear">
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div id="order_in_buttons" class="text-center buttons-list">
+                                <a href="dashboard" iconcls="icon-cancel" class="button_cancel easyui-linkbutton l-btn"
+                                    data-dismiss="modal">
+                                    <span class="l-btn-left">
+                                        <span class="l-btn-text">
+                                            <span class="l-btn-empty icon-cancel">&nbsp;</span>Close</span></span>
+                                </a>
+                                <!-- <a id="ctl00_maincontent_lnk_save" iconcls="icon-ok" class="button_ok easyui-linkbutton l-btn" href="javascript:__doPostBack(&#39;ctl00$maincontent$lnk_save&#39;,&#39;&#39;)">
+                     <span class="l-btn-left"><span class="l-btn-text">
+                     <span class="l-btn-empty icon-ok">&nbsp;
+                     
+                     </span>Ok</span></span></a> -->
+                                <!-- <input type="submit" value="Submit"> -->
+                                <button id="ph_submit_btn" class="easyui-linkbutton l-btn"><span
+                                        class="l-btn-left"><span class="l-btn-text icon-ok"
+                                            style="padding-left: 20px;">Submit</span></span></button>
+                                <!-- <button  type="submit" id="ph_submit_btn">Submit</button> -->
+                                </form>
+                            </div>
+                        </div>
+                        <div id="ctl00_maincontent_updateprogress_providehelp" style="display:none;">
+                            <div style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;">
+                                <div
+                                    style="position: absolute; left: 0; top: 0; margin: 0; width: 100%; height: 100%; background: #404040; opacity: 0.5; z-index: 99999;">
+                                </div>
+                                <div
+                                    style="position: absolute; top: 50%; left: 50%; margin-left: -64px; z-index: 100000; background: white; padding: 20px; border: 3px solid #efb400;">
+                                    <img src="/user/images/loading.gif" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function modal_backdrop() {             //use script when open model behind code
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();
+            };
+        </script>
+    </div>
+    <!-- Modal for provide help first -->
+    <div class="container">
+        <div class="modal fade" id="Get_Help" role="dialog">
+            <div class="modal-dialog" style="top: 20px; width: 878px; left: 0px; z-index: 9009;">
+                <!-- Modal content-->
+                <div class="modal-content window">
+                    <div class="panel-header panel-header-noborder window-header">
+                        <a onclick="hide_gh_modal();" class="close"
+                            style="text-decoration: none; color: #666975 !important;">&times;</a>
+                        <img src="/user/images/filesave.png"><span class=" panel-title panel-with-icon">Request to sell
+                            Mavro</span>
+                    </div>
+                    <div id="ctl00_maincontent_up_providehelp2">
+                        <div id="ctl00_maincontent_pnl_Mavrotransfer">
+                            <div iconcls="icon-save"
+                                style="width: 866px; padding: 10px 10px 20px; height: auto; overflow-y: inherit;"
+                                title="" class="panel-body panel-body-noborder window-body">
+                                <div id="wizard_out_request_1" class="wizard">
+                                    <!--input type="hidden" name="user_select_id" value="36644844695" /-->
+                                    <div id="Div18" class="wizard_form">
+                                        <div id="Div19" class="wizard_rows">
+                                            <div id="wizard_row_winout_typeof_account" class="wizard_row">
+                                                <div class="wizard_row_title">
+                                                    Make sure You have completed your maturity days before preceeding with the Get Help .</div>
+                                                <div class="wizard_row_field field_radio">
+                                                    <div id="wizard_field_winout_typeof_account" class="radio_group"
+                                                        style="">
+                                                        <div class="radio_item">
+                                                            
+                                                            <label for="wizard_field_winout_typeof_account_0"><strong>
+                                                                Deposit date - 10 feb 2021</strong></label>
+                                                            <label for="wizard_field_winout_typeof_account_0"><strong>
+                                                                Days passed  - 5</strong></label>
+                                                                    
+                                                        </div>
+                                                        <div class="radio_item">
+                                                            
+                                                            <label for="wizard_field_winout_typeof_account_1"><strong>
+                                                                   Referral avaliabel - 100 TRX</strong></label>
+                                                            </br>
+                                                            <label for="wizard_field_winout_typeof_account_1"><strong>You Dividneds by now - 1023.32 TRX</strong></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br class="clear">
+                                    <br>
+                                    <br class="clear">
+                                    <div class="wizard_actions">
+                                        &nbsp;<a iconcls="icon-cancel" class="easyui-linkbutton l-btn"
+                                            href="#"><span class="l-btn-left"><span
+                                                    class="l-btn-text icon-ok"
+                                                    style="padding-left: 20px;">Reinvest</span></span></a>&nbsp;
+                                        <a id="" iconcls="icon-ok" class="easyui-linkbutton l-btn"
+                                            onclick="proceed_to_get_help();"><span class="l-btn-left"><span
+                                                    class="l-btn-text icon-ok" style="padding-left: 20px;">Withdraw
+                                                    &gt;&gt;</span></span></a>
+                                    </div>
+                                    <br class="clear">
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ctl00_maincontent_updateprogress_providehelp2" style="display:none;">
+                        <div style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;">
+                            <div
+                                style="position: absolute; left: 0; top: 0; margin: 0; width: 100%; height: 100%; background: #404040; opacity: 0.5; z-index: 99999;">
+                            </div>
+                            <div
+                                style="position: absolute; top: 50%; left: 50%; margin-left: -64px; z-index: 100000; background: white; padding: 20px; border: 3px solid #efb400;">
+                                <img src="/user/images/loading.gif" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
