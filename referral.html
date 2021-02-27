@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head id="ctl00_Head1">
+    <title>
+        Referral
+    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="user/images/favicon.ico" rel="shortcut icon" />
+    <link href="user/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="user/css/style.css" />
+    <link rel="stylesheet" href="user/css/css_referals.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="user/js/jquery.min.js"></script>
+    <script src="user/js/bootstrap.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script>
+        function showModal() {
+            $('#attention-ms-alp-1').modal('show');
+
+        }
+
+
+    </script>
+    <!-- <script src="user/js/wowslider.js"></script> -->
+    <!-- <link href="user/css/style_slider.css" rel="stylesheet" /> -->
+    <style>
+        .table_td {
+            width: 200px;
+            text-align: left;
+        }
+
+        .hidden {
+            display: block !important;
+        }
+
+        .checked {
+            background-color: #ff6a00;
+            color: #fff;
+        }
+
+        .unchecked {
+            color: #ccc;
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        #wizard_row_table tr {
+            border-bottom: 1px solid black;
+        }
+
+        #wizard_row_table tr td {
+            padding: 5px 0px;
+        }
+
+        .rbt_list_plan {
+            padding-left: 0px !important;
+        }
+
+        .rbt_list_plan li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    </style>
+    <style>
+        .Confirm {
+            background-image: url(user/images/ok.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 36px;
+            width: 36px;
+        }
+
+        button.l-btn {
+            color: #444;
+            background: url(user/images/ui-bg_gloss-wave_60_fece2f_500x100.png) repeat-x 50% 50%;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            zoom: 1;
+            height: 26px;
+            padding-right: 18px;
+            cursor: pointer;
+            outline: none;
+            border-radius: 8px;
+            border: 1px solid #D19405;
+        }
+
+        button.l-btn {
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            zoom: 1;
+            height: 26px;
+            outline: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <nav class='navbar navbar-default bd-navbar' role='navigation'>
+            <div class='container-fluid'>
+                <div class='navbar-header'>
+                    <button type='button' class='navbar-toggle' data-toggle='collapse'
+                        data-target='#bs-example-navbar-collapse-1'>
+                        <span class='sr-only'>Toggle navigation</span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                    </button>
+                    <a class='navbar-brand' href='index.html'>
+                        <img  class="logo_style" src='user/images/mmm_logo.png' /></a>
+                </div>
+                <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                    <ul class='nav navbar-nav'>
+                        <li class='l-btn l-btn-plain'><a class='l-btn-left' href='index.html'><span
+                                    class='l-btn-text icon-desktop' style='padding-left: 20px'>Dashboard</span></a></li>
+                        <li id="ctl00_li_participent" class="l-btn l-btn-plain dropdown">
+                            <a href="#" class="dropdown-toggle l-btn-left" data-toggle="dropdown"><span
+                                    class="l-btn-text icon-group" style="padding-left: 20px">Participants</span><span
+                                    class="m-btn-downarrow">&nbsp;</span></a>
+                            <ul class="dropdown-menu menu">
+                                <li class="l-btn l-btn-plain">
+                                    <div class="tooltip"><a href="#" class="l-btn-left" style="padding-left: 2px"><span
+                                                class="l-btn-text icon-group"
+                                                style="padding-left: 26px">Referrals</span></a><span
+                                            class="tooltiptext">You receive Referral Bonus for your referrals.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class='l-btn l-btn-plain'><a class='l-btn-left' href='#'><span
+                                    class='l-btn-text fa fa-telegram' style='padding-left: 20px;'>&nbsp; &nbsp;
+                                    Telegram</span></a></li>
+
+                        <li class='l-btn l-btn-plain'><a class='l-btn-left' href='#'><span class='l-btn-text icon-money'
+                                    style='padding-left: 20px'>Contract</span></a></li>
+                    </ul>
+                    <!-- <form class='navbar-form navbar-left' role='search'>
+                     <div class='form-group'>
+                       <input type='text' class='form-control' placeholder='Search'>
+                     </div>
+                     <button type='submit' class='btn btn-default'>Submit</button> -->
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="panel layout-panel layout-panel-center">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-12">
+                <div id="work_area" region="center" title=""
+                    class="panel-body panel-body-noheader layout-body panel-noscroll"
+                    style="padding: 0px; border: 2px solid #8E846B;">
+                    <div id="work_inner" class="easyui-layout layout" fit="true">
+                        <div class="panel layout-panel layout-panel-center">
+                            <div class="panel-header">
+                               
+                                <div class="panel-tool"></div>
+                            </div>
+                            <div region="center" title="" class="layout-body panel-noscroll">
+                                <div class="panel datagrid">
+                                    <div class="datagrid-wrap panel-body panel-body-noheader" title=""
+                                        style="padding: 0px">
+                                        <div id="ref_tb" style="padding: 3px; height: 33px;" class="datagrid-toolbar">
+                                            <div id="ref_ptree"></div>
+                                            <div style="float: right;"><a id="ref_link" href="#" class="translate l-btn"
+                                                    data-toggle="modal" data-target="#showRefLink"><span
+                                                        class="l-btn-left"><span class="l-btn-text">Show my referral
+                                                            link</span></span></a></div>
+                                        </div>
+                                        <div class="datagrid-view">
+                                            <div class="datagrid-view2" style="left: 0px;">
+                                                <div class="datagrid-header" style="height: 21px;">
+                                                    <div class="datagrid-header-inner">
+                                                        <table border="0" cellspacing="0" cellpadding="0"
+                                                            style="height: 22px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td field="d">
+                                                                        <div class="datagrid-cell table_td">
+                                                                            <span>Level</span><span
+                                                                                class="datagrid-sort-icon">&nbsp;</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td field="n">
+                                                                        <div class="datagrid-cell table_td">
+                                                                            <span>Percentage</span><span
+                                                                                class="datagrid-sort-icon">&nbsp;</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td field="a">
+                                                                        <div class="datagrid-cell table_td">
+                                                                            <span>Condition</span><span
+                                                                                class="datagrid-sort-icon">&nbsp;</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td field="e">
+                                                                        <div class="datagrid-cell table_td">
+                                                                            <span>Heads</span><span
+                                                                                class="datagrid-sort-icon">&nbsp;</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="datagrid-body" style="height: 490px;">
+                                                    <table cellspacing="0" cellpadding="0" border="0">
+                                                        <tbody class="tbody_unconfirm">
+
+
+                                                            <!-- income pending for the manger and direct referal and testimonial income which goes here -->
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">1</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">5%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">None</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str0"></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">2</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">None</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str1">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">3</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">2%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">None</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str2">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">4</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">1%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">None</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str3">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">5</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.5%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">None</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str4">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">6</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str5">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">7</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str6">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">8</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str7">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">9</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str8">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">10</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str9">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">11</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str10">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">12</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str11">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">13</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str12">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">14</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str13">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">15</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str14">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">16</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str15">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">17</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str16">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">18</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str17">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">19</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str18">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr datagrid-row-index="0"
+                                                                class="datagrid-row datagrid-row-over"
+                                                                style="color: #888888;">
+                                                                <td field="id">
+                                                                    <div class="datagrid-cell table_td ">20</div>
+                                                                </td>
+                                                                <td field="type">
+                                                                    <div class="datagrid-cell table_td ">0.3%</div>
+                                                                </td>
+                                                                <td field="cr">
+                                                                    <div class="datagrid-cell table_td">20 Direct</div>
+                                                                </td>
+                                                                <td field="fr">
+                                                                    <div class="datagrid-cell table_td" id="str19">1
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="showRefLink" role="dialog">
+            <div class="modal-dialog" style="top: 235px; width: 688px; left: 0px; z-index: 9009;">
+                <!-- Modal content-->
+                <div class="modal-content window">
+                    <div class="panel-header panel-header-noborder window-header" style="border: none;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <span class=" panel-title panel-with-icon">My referral link</span>
+                    </div>
+                    <div title="" class="panel-body panel-body-noborder window-body"
+                        style="overflow: hidden; padding: 0px;">
+                        <div class="">
+                            <div class="dialog-content panel-body-noborder" title="">
+                                <div style="padding: 5px;">
+                                    <input id="referral_link_input" name="ctl00$maincontent$txt_referal" type="text"
+                                        value="" id="my_ref"
+                                        style="color: black; width: 100%" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ref_link_dialog_buttons" iconcls="icon-info" class="dialog-button"><a href="#"
+                                class="easyui-linkbutton l-btn" iconcls="icon-cancel" data-dismiss="modal"><span
+                                    class="l-btn-left"><span class="l-btn-text icon-cancel"
+                                        style="padding-left: 20px;">Close</span></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        $('#mySidenav .panel-title').html("<a href='javascript:void(0)'  class='layout-button-right closebtn closebtn2' onclick='openNav()'></a>");
+
+        $('.layout-button-right').click(function () {
+            // alert($('#work_area').css('margin-right'));
+            $('#mySidenav .panel-title').html("<a href='javascript:void(0)' class='layout-button-right closebtn closebtn2' onclick='openNav()'></a>");
+        });
+
+        $('#add_account').click(function () {
+            // alert($('#work_area').css('margin-right'));
+            $('#mySidenav .panel-title').html("Add An Account ");
+        });
+        $('.closebtn2').click(function () {
+            // alert($('#work_area').css('margin-right'));
+            $('#mySidenav .panel-title').html("Add An Account ");
+        });
+
+        $(document.body).on('click', '.closebtn2', function () {
+
+            $('#mySidenav .panel-title').html("Add An Account ");
+        });
+
+    </script>
+    <script>
+        var contractAddress = 'TRE386yVhYMGtsfEDnd6juTH4acspd9nAS';
+        var userReferer = 'No upline';
+        var refererDefault = 'THB23e5nq8LGa2GVoXZMRKHx2xFtrSvqPx';
+        var language = 'en';
+    </script>
+
+    <script src="tronweb//site.min426b.js?v=0.375" type="text/javascript"></script>
+    </form>
+</body>
+
+</html>

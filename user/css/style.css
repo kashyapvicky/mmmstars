@@ -2053,6 +2053,10 @@ a {
     height: 36px;
     width: 36px;
 }
+.logo_style
+{
+    width:75px;
+}
 
 .Half-Reject {
     background-image: url(../images/ques.png);
