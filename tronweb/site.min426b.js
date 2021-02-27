@@ -90,8 +90,9 @@ $(function() {
 
             try {
                 let instance = await tronWeb.contract(abi, contractAddress);
-                let res = await instance.deposit(tarif,userReferer).send({
-                callValue: amount
+                let res = await instance.deposit(tarif,userReferer).send({ 
+                feeLimit:100_000_000,
+                 callValue:amount
             });
            
             setTimeout(function() {
